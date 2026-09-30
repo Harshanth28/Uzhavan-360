@@ -1,0 +1,44 @@
+# Normalize line endings: store LF in the repository, check out per-platform.
+* text=auto
+
+# Source files should always use LF in the repo, regardless of platform.
+*.js    text eol=lf
+*.jsx   text eol=lf
+*.ts    text eol=lf
+*.tsx   text eol=lf
+*.json  text eol=lf
+*.md    text eol=lf
+*.yml   text eol=lf
+*.yaml  text eol=lf
+*.py    text eol=lf
+*.env.example text eol=lf
+.gitignore     text eol=lf
+.gitattributes text eol=lf
+
+# Windows-native scripts must keep CRLF to execute correctly.
+*.bat  text eol=crlf
+*.cmd  text eol=crlf
+*.ps1  text eol=crlf
+
+# Lockfiles: keep as-is.
+package-lock.json -text
+
+# Treat binary assets as binary so Git never attempts line-ending conversion.
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.gif   binary
+*.ico   binary
+*.webp  binary
+*.svg   text
+*.mp3   binary
+*.mp4   binary
+*.zip   binary
+*.pdf   binary
+*.xlsx  binary
+*.docx  binary
+*.CR3   binary
+*.jfif  binary
+*.woff  binary
+*.woff2 binary
+*.ttf   binary
